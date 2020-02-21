@@ -47,7 +47,7 @@ const FlickrInfo = ({ id, description, owner, ownername, tags, title }) => {
               )
           )}
           {tagsArray.length > 2 && (
-            <Tooltip placement="top" title={tags.replace(" ", " / ")}>
+            <Tooltip placement="top" title={tags}>
               <Tag color="#2ea1f8">{`+${tagsArray.length - 2}`}</Tag>
             </Tooltip>
           )}

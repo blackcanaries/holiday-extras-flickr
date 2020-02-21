@@ -1,0 +1,38 @@
+.toolbar {
+  background: #fff;
+  border-bottom: 1px solid #e6eaee;
+  margin-bottom: 20px;
+  padding: 15px 0;
+  text-align: center;
+
+  @media (min-width: 640px) {
+    text-align: left;
+  }
+
+  h2 {
+    float: left;
+  }
+
+  .total {
+    border-left: 1px solid #999;
+    color: #999;
+    display: none;
+    float: left;
+    line-height: 18px;
+    margin: 7px 0 7px 10px;
+    padding-left: 10px;
+
+    @media (min-width: 500px) {
+      display: block;
+    }
+  }
+
+  .ant-input-search {
+    float: right;
+    width: 175px;
+
+    @media (min-width: 500px) {
+      width: 225px;
+    }
+  }
+}

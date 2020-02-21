@@ -1,0 +1,141 @@
+.card {
+  background: #fff;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+
+  &:hover {
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);
+  }
+}
+
+.photo-container {
+  position: relative;
+
+  img {
+    height: auto;
+    width: 100%;
+  }
+
+  .photo_overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #1890ff;
+    opacity: 0;
+  }
+}
+
+.photo-info {
+  background: #fff;
+  padding: 20px;
+
+  h3 {
+    text-transform: uppercase;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    a {
+      color: #393c45;
+    }
+  }
+
+  .author {
+    color: rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-decoration: underline;
+    white-space: pre-wrap;
+
+    &:hover {
+      color: rgba(0, 0, 0, 0.6);
+    }
+  }
+
+  .desc {
+    font-size: 15px;
+    max-height: 55px;
+    margin-bottom: 15px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: pre-wrap;
+  }
+
+  p {
+    font-size: 16px;
+    color: #b1b1b3;
+  }
+}
+
+.card.animate .photo_overlay {
+  opacity: 0.7;
+  -webkit-transition: all 200ms ease-out;
+  -moz-transition: all 200ms ease-out;
+  -o-transition: all 200ms ease-out;
+  transition: all 200ms ease-out;
+}
+
+.view_details {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: 0;
+  border: 2px solid #fff;
+  color: #fff;
+  font-size: 18px;
+  text-align: center;
+  text-transform: uppercase;
+  transform: translate(-50%, -50%);
+  font-weight: 700;
+  padding: 10px 0;
+  width: 90%;
+  opacity: 0;
+  -webkit-transition: all 200ms ease-out;
+  -moz-transition: all 200ms ease-out;
+  -o-transition: all 200ms ease-out;
+  transition: all 200ms ease-out;
+}
+
+.view_details:hover {
+  background: #fff;
+  color: #1890ff;
+  cursor: pointer;
+}
+
+.card.animate .view_details {
+  opacity: 1;
+  width: 80%;
+  font-size: 14px;
+  margin: 0;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  -webkit-transition: all 200ms ease-out;
+  -moz-transition: all 200ms ease-out;
+  -o-transition: all 200ms ease-out;
+  transition: all 200ms ease-out;
+}
+
+.photo-loading {
+  text-align: center;
+  background: rgba(0, 0, 0, 0.05);
+  margin-bottom: 20px;
+  padding: 50px;
+  margin: 20px 0;
+}
+
+.photo-loaded {
+  display: none;
+}
+
+img.photo-loaded {
+  display: block;
+}
+
+img.photo-loading {
+  display: none;
+}
+
+.ant-tag {
+  margin: 0 5px 5px 0;
+}

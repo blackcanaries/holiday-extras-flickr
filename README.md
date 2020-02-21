@@ -1,68 +1,76 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Flickr Photo Stream
 
-## Available Scripts
+Flickr Photo Stream is a web app that consumes the Flickr API to display and search for photos created by different authors.
 
-In the project directory, you can run:
+## Prerequisites
 
-### `yarn start`
+- Due to time limits tests have not been included in this build.
+- The redux store is currently exposed to Chrome redux devtools for testing purposes.
+- At the time of development Flickr's author about page was intermittently displaying a 404 page so this link has been replaced with the author's photostream on instead.
+- The Flickr API keys have been hardcoded into the React service. This is considered bad practice but for the purpose of this project seemed acceptable.
+- When calling the Flickr API service "safe_search" and "safe" parameters have been set to 1, this is the highest level of image safety that Flickr offer.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Dependencies & DevDependencies
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+- antd
+- axios
+- cors
+- history
+- html-react-parser
+- node-sass
+- react
+- react-dom
+- react-lazy-load
+- react-masonry-css
+- react-redux
+- react-router-dom
+- react-scripts
+- redux
+- redux-thunk
+- redux-immutable-state-invariant
 
-### `yarn test`
+## Installation
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Flickr Photo Stream requires [Node.js](https://nodejs.org/) v12.14.0+ to run.
 
-### `yarn build`
+Install the dependencies and devDependencies and start the server.
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```sh
+$ git clone git@bitbucket.org:iamjonathan/holiday-extras-flickr.git
+$ cd holiday-extras-flickr
+$ npm install
+```
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+## Development
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Flickr Photo Stream uses create-react-app for fast developing.
+Make a change in your file and instantaneously see your updates!
 
-### `yarn eject`
+### Starting the development server:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+The development server is set to run on http://localhost:3000/. If this port is being used, create-react-app will ask to use a different port.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```sh
+$ npm start
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+#### Building for source
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+For production release:
 
-## Learn More
+```sh
+$ npm run build
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Test with a static server:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```sh
+$ yarn global add serve
+$ serve -s build
+```
 
-### Code Splitting
+## License
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+MIT
 
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+**Thanks for your consideration**

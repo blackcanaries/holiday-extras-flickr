@@ -2,14 +2,6 @@
 
 Flickr Photo Stream is a web app that consumes the Flickr API to display and search for photos created by different authors.
 
-## Prerequisites
-
-- Due to time limits tests have not been included in this build.
-- The redux store is currently exposed to Chrome redux devtools for testing purposes.
-- At the time of development Flickr's author about page was intermittently displaying a 404 page so this link has been replaced with the author's photostream on instead.
-- The Flickr API keys have been hardcoded into the React service. This is considered bad practice but for the purpose of this project seemed acceptable.
-- When calling the Flickr API service "safe_search" and "safe" parameters have been set to 1, this is the highest level of image safety that Flickr offer.
-
 ## Dependencies & DevDependencies
 
 - antd
@@ -72,5 +64,3 @@ $ serve -s build
 ## License
 
 MIT
-
-**Thanks for your consideration**
